@@ -1,0 +1,56 @@
+html{
+  box-sizing: border-box;
+}
+
+body{
+  background: url('./assets/catspattern.png') repeat;
+}
+
+.slider{
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+.slider__radio-button{
+  width: 0;
+  margin: 0;
+}
+
+.slider__view{
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "slider__imgs slider__imgs"
+                        "slider__captions slider__controls";
+
+  width: 100vw;
+  max-width: 43rem;
+  overflow: hidden;
+}
+
+.slider__imgs{
+  display: flex;
+  grid-area: slider__imgs;
+  background-size: cover;
+}
+
+.slider__img{
+  width: 100%;
+}
+
+
+
+#slide-1-radio:checked ~ .slider__view .slider__imgs #slide-1-img,
+#slide-2-radio:checked ~ .slider__view .slider__imgs #slide-2-img,
+#slide-3-radio:checked ~ .slider__view .slider__imgs #slide-3-img,
+#slide-4-radio:checked ~ .slider__view .slider__imgs #slide-4-img,
+#slide-5-radio:checked ~ .slider__view .slider__imgs #slide-5-img
+{
+  order: -1;
+  animation: slide-animation;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}

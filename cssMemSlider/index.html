@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="slider.css">
+    <link rel="icon" href="assets/favicon.ico">
     <title>Document</title>
 </head>
 <body>
+
+<div class="wrapper">
+
+  <input type="radio" checked="checked" name="controls_radio-group" class="controls__radio-button" id="slide-1-radio" >
+  <input type="radio"  name="controls_radio-group" class="controls__radio-button" id="slide-2-radio" >
+
+  <div class="slider">
+
+
+          <div class="slide-visible">
+            <img id="slide-1-img" src="./assets/11.jpg" alt="">
+            <img id="slide-2-img" src="./assets/22.jpg" alt="">
+          </div>
+
+          <div class="captions">
+            <div class="caption" id="caption-1">Hi, human!</div>
+            <div class="caption" id="caption-2">Haven't Had My Morning Coffee Yet</div>
+          </div>
+
+
+          <div class="controls">
+            <label class="controls__circle" id="slide-1-circle" for="slide-1-radio">  </label>
+            <label class="controls__circle" id="slide-2-circle" for="slide-2-radio">  </label>
+          </div>
+
+
+  </div>
+
+
+</div>
 
 
 </body>

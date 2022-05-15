@@ -1,6 +1,4 @@
 
-
-
 html{
   box-sizing: border-box;
 }
@@ -70,6 +68,19 @@ body{
   padding: 0.8rem;
 }
 
+
+.slider__controls-click-area:hover .slider__controls-circle:active{
+  border: 0.1rem solid  slategray;
+  background-color: slategray
+}
+
+.slider__controls-click-area:hover > .slider__controls-circle{
+  border: 0.1rem solid white;
+  background-color: white;
+}
+
+
+
 .slider__controls-circle{
   display: block;
   border-radius: 50%;
@@ -84,10 +95,7 @@ body{
   background-color: white;
 }
 
-.slider__controls-circle:active{
-  border: 0.1rem solid  slategray;
-  background-color: slategray
-}
+
 
 
 
@@ -106,6 +114,7 @@ body{
 }
 
 
+
 #slide-1-radio:checked ~ .slider__view .slider__captions #slide-1-caption,
 #slide-2-radio:checked ~ .slider__view .slider__captions #slide-2-caption,
 #slide-3-radio:checked ~ .slider__view .slider__captions #slide-3-caption,
@@ -121,7 +130,6 @@ body{
 
 
 
-
 #slide-1-radio:checked ~ .slider__view .slider__controls #slide-1-circle .slider__controls-circle,
 #slide-2-radio:checked ~ .slider__view .slider__controls #slide-2-circle .slider__controls-circle,
 #slide-3-radio:checked ~ .slider__view .slider__controls #slide-3-circle .slider__controls-circle,
@@ -130,11 +138,6 @@ body{
 {
   background-color: transparent;
 }
-
-
-
-
-
 
 
 
@@ -155,6 +158,52 @@ body{
   order: -1;
   opacity: 1;
 }
+
+
+
+#slide-1-radio:checked ~ .slider__view .slider__imgs{
+  transition-delay: 0.5s;
+  transition-property: background-image;
+  background-image: url(./assets/11.jpg);
+  background-size: contain;
+}
+
+#slide-2-radio:checked ~ .slider__view .slider__imgs{
+  transition-delay: 0.5s;
+  transition-property: background-image;
+  background-image: url(./assets/22.jpg);
+  background-size: contain;
+}
+
+
+#slide-3-radio:checked ~ .slider__view .slider__imgs{
+  transition-delay: 0.5s;
+  transition-property: background-image;
+  background-image: url(./assets/33.jpg);
+  background-size: contain;
+}
+
+
+#slide-4-radio:checked ~ .slider__view .slider__imgs{
+  transition-delay: 0.5s;
+  transition-property: background-image;
+  background-image: url(./assets/44.jpg);
+  background-size: contain;
+}
+
+#slide-5-radio:checked ~ .slider__view .slider__imgs{
+  transition-delay: 0.5s;
+  transition-property: background-image;
+  background-image: url(./assets/55.jpg);
+  background-size: contain;
+}
+
+
+
+
+
+
+
 
 
 @keyframes slide-animation {
@@ -204,5 +253,12 @@ body{
   .slider__controls {
     justify-content: center;
   }
+
+
+  .slider__captions{
+    font-size: 1rem;
+  }
+
+
 
 }
